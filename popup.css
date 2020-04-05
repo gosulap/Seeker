@@ -1,0 +1,41 @@
+body{
+    height: 60px;
+    min-width: 350px;
+}
+
+#results{
+    display: grid;
+    grid-template-columns: 85% 14% 1%;
+    grid-row-gap: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+#results > a{
+    background-color: white;
+   /* text-align: center; */
+   position: relative;
+}
+
+#results > a:nth-child(odd){
+    background-color: #DCDCDC;
+} 
+
+#seeker{
+    margin: 5px;
+    width: 96vw;
+}
+
+#results a{
+    font-size: 14px;
+}
+
+#results button{
+   padding: 0px;
+}
+
+#test {
+    position: absolute; 
+    top:0; 
+    right:0;
+}

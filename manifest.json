@@ -1,0 +1,14 @@
+{
+    "name": "Seeker",
+    "version": "0.5",
+    "description": "",
+    "permissions":["storage","declarativeContent","bookmarks"],
+    "background": {
+        "scripts" : ["background.js"],
+        "persistent": false
+    },
+    "page_action":{
+        "default_popup":"popup.html"
+    },
+    "manifest_version": 2
+  }

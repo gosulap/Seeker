@@ -1,41 +1,32 @@
 body{
-    height: 60px;
+    height: 50px;
     min-width: 350px;
 }
-
 #results{
-    display: grid;
-    grid-template-columns: 85% 14% 1%;
-    grid-row-gap: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
+    margin: 0px;
 }
 
-#results > a{
-    background-color: white;
-   /* text-align: center; */
-   position: relative;
-}
-
-#results > a:nth-child(odd){
-    background-color: #DCDCDC;
+#results div{
+    position: relative;
+    margin: 0;
 } 
 
-#seeker{
-    margin: 5px;
-    width: 96vw;
-}
-
 #results a{
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #039be5;
 }
-
 #results button{
-   padding: 0px;
-}
-
-#test {
     position: absolute; 
     top:0; 
     right:0;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    color: #004d40;
+}
+
+#seeker{
+    margin: 5px; 
+    width: 96vw;
 }

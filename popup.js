@@ -13,18 +13,19 @@ function makeList(inputText){
             // make sure we arent looking at a folder 
             if(items[i]["url"] !== undefined){ 
                 
+                let wrapper = document.createElement("div"); 
+                wrapper.className = "collection-item"; 
+
                 // setup the row 
                 let current = document.createElement("a"); 
                 current.appendChild(document.createTextNode(items[i]["title"])); 
-                current.className = "bookmarklink"; 
                 current.href = items[i]["url"]; 
-                current.target = "_blank"; 
-                results.appendChild(current); 
+                current.target = "_blank";  
 
                 let button = document.createElement("button"); 
                 button.id = items[i]["id"]; 
-                button.innerHTML = "X"; 
-                button.className = "waves-effect waves-light btn-small"; 
+                button.innerHTML = "✕"; 
+                button.title = "Delete this bookmark";
                 button.addEventListener("click",function(){
                     let id = this.id; 
                     chrome.bookmarks.remove(id,function(){
@@ -33,8 +34,9 @@ function makeList(inputText){
                     }); 
                 }); 
     
-                results.appendChild(button); 
-                results.appendChild(document.createElement("br")); 
+                wrapper.appendChild(button); 
+                wrapper.appendChild(current);
+                results.appendChild(wrapper);
 
                 // go make the window as big as the largest title 
                 let canvas = document.createElement("canvas");

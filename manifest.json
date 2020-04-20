@@ -1,7 +1,7 @@
 {
     "name": "Seeker",
     "version": "0.5",
-    "description": "",
+    "description": "Search tool for your bookmarks",
     "permissions":["storage","declarativeContent","bookmarks"],
     "background": {
         "scripts" : ["background.js"],
